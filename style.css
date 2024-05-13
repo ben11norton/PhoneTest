@@ -450,6 +450,9 @@ body{
         max-height: 100vh;
         overflow-y: hidden;
     }
+    .body::-webkit-scrollbar {
+        display: none;
+    }
     .nav{
         z-index: 10;
     }
