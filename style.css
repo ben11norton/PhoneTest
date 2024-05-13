@@ -5,10 +5,6 @@
     font-family: 'Orbitron', sans-serif;
 }
 
-html{
-    scroll-behavior: smooth;
-}
-
 body{
     background: #ffffff;
     background-size: cover;
