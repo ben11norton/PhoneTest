@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <title>Ben Norton: Portfolio Website</title>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Work Experience</a></li>
+                    <li><a href="#">Get in Touch</a></li>
+                </ul>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="fa fa-bars" aria-hidden="true" onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+        <section>
+            <div class="content">
+                <h1>Binary Flow</h1>
+                <p>1 0 1 0 1 0 1 0 1 0 Ben Norton 0 1 0 1 0 1 0 1 0 1</p>
+            </div>
+        </section>
+        <section class="arrow">
+            <div class="down-arrow" id="downArrow">
+                <i class="fa fa-long-arrow-down" aria-hidden="true" onclick="moveDown()"></i>
+            </div>
+        </section>
+        <section class="hidden">
+            <div class="progress-bar">
+                <div class="progress-line"></div> 
+                <div class="progress-line-background"></div>
+                    <div class="steps">
+                        <div class="step active">
+                            <span class="step-heading">Hi</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-heading">Skills<i class="fa fa-code" aria-hidden="true"></i></span>
+                            <span class="step-heading-under"><i class="fa fa-arrow-up" aria-hidden="true"></i>Click the points to explore</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-heading">Journey<i class="fa fa-graduation-cap" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="step">
+                            <span class="step-heading">Hobbies<i class="fa fa-child" aria-hidden="true"></i></i></span>
+                        </div>
+                    </div>
+                </div>
+            <div class="personal-info">
+                <h2>Hello there</h2>
+                <img src="Images/PP.png" alt="Photo of me">
+                <p>
+                    My name is Ben, I am a passionate change-maker actively exploring the world of programming and dedicated to working towards a sustainable future.
+                </p>
+            </div>
+            <div class="skills">
+                <h2>Skills</h2>
+                <img src="Images/skillImg.png" alt="peaceOfMind">
+                <ul>
+                    <li>C# MVC .Net Software Development</li>
+                    <li>SQL Database Management</li>
+                    <li>Profficient in HTML, CSS, and Javascript</li>
+                    <li>Arc GIS</li>
+                </ul>
+            </div>
+            <div class="summary">
+                <h2>Academic Journey <i class="fa fa-graduation-cap" aria-hidden="true"></i></h2>
+                <h3>Stellenbosch University <img src="Images/stellogo.png" alt="Stellenbosch University"></h3>
+                <p>
+                    BA Honours Geography and Environmental Studies Feb 2021-Dec 2024
+                </p>
+                <h3>Other</h3>
+                <P>
+                    Truro College September 2017-June 2020 | Truro School September 2012-June 2017
+                </P>
+            </div>
+            <div class="hobbies">
+                <h2>Hobbies</h2>
+                <img src="Images/Jonkershoek.jpg" alt="MountainView(not ai generated)">
+                <p>
+                    In my free time you can find me running in the mountains, ocassionally swimming/surfing, or lounging on beach during holidays.  
+                </p>
+                <p class="not-phone">
+                    I have also become super passionate about creating interactive digital experiences through which I hope to make a positive impact in the fields of Renewable Energy and envrionmental challenges.
+                </p>
+                <p>
+                    Continous programming experimentation carries me through lots of my free hours, pondering on ways programming can solve real world problems.
+                </p>
+            </div>
+        </section>    
+        <section class="arrow2">
+            <div class="up-arrow" id="upArrow">
+                <i class="fa fa-long-arrow-up" aria-hidden="true" onclick="moveUp()"></i>
+            </div>
+        </section>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

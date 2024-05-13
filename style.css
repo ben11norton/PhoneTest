@@ -1,0 +1,485 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #ffffff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-y: scroll;
+}
+
+/* navigation menu */
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.nav{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    z-index: 100;
+    box-shadow: 5px 5px 9px #f5f5f5, -5px -5px 7px #dadada;
+}
+
+.nav-menu ul {
+    display: flex;
+}
+
+.nav-menu ul li {
+    list-style-type: none;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 200;
+    color: #6e6e6e;
+    padding: 10px 20px;
+    margin: 0 25px;
+    position: relative; /* Ensure relative positioning for the ::after pseudo-element */
+}
+
+/* Slide in */
+.nav-menu ul li a {
+    overflow: hidden;
+}
+
+.nav-menu ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: #c4c4c4;
+    opacity: 0;
+    transition: transform 0.6s ease;
+    transform: translateX(-100%);
+}
+
+.nav-menu ul li a:hover::after,
+.nav-menu ul li a:focus::after {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+
+.nav-menu-btn{
+    display: none;
+}
+
+
+/* responsive nav menu */     
+@media only screen and (max-width: 1000px){
+    .nav-menu.responsive{
+        top: 0;
+    }
+    .nav-menu{
+        position: fixed;
+        margin-top: 100px;
+        top: -130%;
+        display: flex;
+        justify-content: center;
+        background: rgba(26, 26, 26, 0.452);
+        width: 100%;
+        height: 100vh;
+        backdrop-filter: blur(20px);
+        transition: .7s;
+    }
+    .nav-menu ul{
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-menu ul li a{
+        color: #fff;
+        font-size: 15px;
+        padding: 10px;
+    }
+    /* Disable sliding animation underline effect */
+    .nav-menu ul li a::after {
+        display: none;
+    }
+    
+    /* nav menu button */
+    .nav-menu-btn{
+        display: block;
+    }
+    .nav-menu-btn i{
+        font-size: 25px;
+        color: #747474;
+        padding: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 1s;
+    }
+    .nav-menu-btn i:hover{
+        background: #747474;
+        color: #e2e2e2;
+    }
+    a:hover{
+        border-bottom: 2px solid #ffffff;
+    }
+}
+
+/* page content */
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: -5px -5px 9px #f5f5f5, 5px 5px 7px #dadada;
+}
+
+.content h1{
+    color: #cacaca;
+    font-size: 90px;
+    padding: 20px;
+    transition: 1s;
+}
+.content h1:hover{
+    color: #383838;
+}
+
+.content p{
+    font-size: 15px;
+    padding: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #747474;
+}
+
+
+
+
+.arrow, .arrow2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-top: 600px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    box-shadow: -5px -5px 9px #f5f5f5, 5px 5px 7px #dadada;
+}
+.arrow2 {
+    display: none; /* Initially hidden */
+}
+.down-arrow, .up-arrow {
+    /* transform: translate(23%, -5%);  */
+    font-size: 40px;
+    color: #e9e9e9;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s;
+}
+.down-arrow:hover, .up-arrow:hover {
+    color: #000000;
+}
+
+/* ____________________________*/
+/* H I D D E N    C O N T E N T*/
+/* ____________________________*/
+.hidden {
+    margin-top: 50px;
+    display: none;
+    justify-content: center;
+}
+
+
+/* progress bar */
+.progress-bar {
+    margin-top: -80px;
+    width: 60%;
+    max-width: 700px;
+    border-radius: 20px;
+    padding: 10px;
+    position: fixed;
+}
+.progress-line {
+    height: 6px;
+    background-color: #ddd; /* Default inactive line color */
+    width: 0; /* Initially has no width */
+    position: absolute;
+    top: calc(50%); /* Position at the middle vertically */
+    transform: translateY(-50%);
+    border-radius: 3px;
+    z-index: 0;
+    transition: width 0.6s ease;
+}
+.progress-line-background {
+    height: 6px;
+    background-color: #ddd; /* Default background line color */
+    position: absolute;
+    top: calc(50%); /* Position at the middle vertically */
+    transform: translateY(-50%);
+    border-radius: 3px;
+    width: calc(100% - 30px); /* Adjusted width to match the span of the steps */
+    left: 15px; /* Starting position offset to align with the first step */
+    z-index: -1;
+}
+.steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.step {
+    width: 30px;
+    height: 30px;
+    background-color: #dfdfdf;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1; /* Ensures the steps are above the line */
+}
+.step-heading {
+    position: absolute;
+    top: -35px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px; /* Adjust as needed */
+    color: #747474;
+    text-align: center;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+.step-heading i{
+    padding-left: 5px;
+}
+.step-heading-under{
+    position: absolute;
+    padding-left: 8px;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    top: 50px;
+    color: #494949;
+    text-align: center;
+    white-space: nowrap;
+}
+.step-heading-under i{
+    padding-right: 5px;
+}
+.step.active {
+    background-color: #747474;
+}
+/* Full line under the steps, always gray by default */
+.progress-bar::before {
+    content: '';
+    position: absolute;
+    height: 6px;
+    background-color: #ddd; /* Default inactive line color */
+    width: 0; /* Initially has no width */
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 3px;
+}
+.step::after {
+    content: '';
+    position: absolute;
+    height: 6px;
+    background-color: #747474; /* Purple color for the active line */
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 0; /* Initially there is no width */
+    z-index: 0;
+}
+.step.active::after {
+    width: calc((100% / (var(--total-steps) - 1)) - 15px); /* Adjust based on number of steps minus the start offset */
+    left: 15px; /* Adjust to start right from the center of the step */
+}
+.step.active + .step.active::after {
+    content: '';
+    position: absolute;
+    height: 6px;
+    background-color: #747474; /* Purple color for the active line */
+    width: calc(100% + 15px); /* Width adjusted to span to the center of the next active step */
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1; /* Ensure it's behind the steps */
+}
+.step:not(:last-child).active + .step::after {
+    width: calc((100% / (var(--total-steps) - 1)) - 30px); /* Ensures the line doesn't extend into the next point */
+    left: 30px; /* Starts right after the current step */
+}
+.step:last-child.active::after {
+    width: 0; /* No line should appear after the last step if it's active */
+}
+
+
+
+
+/* personal info */
+.personal-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 36px;
+    padding-bottom: 30px;
+}
+.personal-info h2{
+    font-size: 20px;
+    padding: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #747474;
+    padding: 20px;
+}
+.personal-info p{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    text-align: center;
+    width: 60%;
+}
+.personal-info img{
+    width: 30%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+
+/* Skills */
+.hidden .skills{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+.hidden .skills h2{
+    font-size: 20px;
+    padding: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #747474;
+    padding: 20px;
+}
+.hidden .skills img{
+    width: 30%;
+    border-radius: 10px;
+}
+.hidden .skills ul{
+    padding: 5px;
+    list-style: circle;
+}
+.hidden .skills ul li{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 5px;
+    margin-left: 100px;
+    width: 100%;
+}
+/* summary */
+.hidden .summary{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 47px;
+    padding-bottom: 180px;
+}
+.hidden .summary h2{
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #747474;
+}
+.hidden .summary h3{
+    padding-top: 30px;
+    padding-bottom: 10px;
+    color: #747474;
+}
+.hidden .summary img{
+    width: 30px;
+}
+.hidden .summary p{
+    padding: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    width: 70%;
+}
+/* Hobbies */
+.hidden .hobbies {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+.hidden .hobbies h2{
+    font-size: 20px;
+    padding: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #747474;
+    padding: 20px;
+}
+.hidden .hobbies img{
+    width: 30%;
+    border-radius: 10px;
+}
+.hidden .hobbies p{
+    padding-top: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 60%;
+}
+
+
+
+
+/* PHONE SCREEN DESIGN */
+@media only screen and (min-width: 300px) and (max-width: 767px){
+    .nav{
+        z-index: 10;
+    }
+    .content{
+        box-shadow: none;
+    }
+    /* progress bar */
+    .progress-bar {
+        margin-top: 1px;
+        width: 80%;
+        max-width: 700px;
+        border-radius: 20px;
+        padding: 10px;
+    }
+    .personal-info{
+        margin-top: 60px;
+        margin-bottom: -50px;
+    }
+    .hidden .skills{
+        margin-top: 63px;
+    }
+    .hidden .skills ul li{
+        width: 60%;
+        margin-left: 150px;
+    }
+    .hidden .summary{
+        margin-top: 85px;
+        margin-bottom: -160px;
+    }
+    .hidden .hobbies{
+        margin-top: 80px;
+    }
+    .hidden .hobbies .not-phone{
+        display: none;
+    }
+}
+
