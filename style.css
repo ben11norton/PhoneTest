@@ -14,7 +14,6 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    overflow-y: scroll;
 }
 
 /* navigation menu */
@@ -445,7 +444,7 @@ body{
 
 
 /* PHONE SCREEN DESIGN */
-@media only screen and (max-width: 480px){
+@media only screen and (min-width: 300px) and (max-width: 767px){
     .body{
         max-height: 100vh;
         overflow-y: hidden;
