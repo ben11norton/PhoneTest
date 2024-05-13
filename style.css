@@ -446,6 +446,9 @@ body{
 
 /* PHONE SCREEN DESIGN */
 @media only screen and (min-width: 300px) and (max-width: 767px){
+    .body{
+        overflow-y: hidden;
+    }
     .nav{
         z-index: 10;
     }
