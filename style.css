@@ -76,8 +76,6 @@ body{
 }
 
 
-
-
 .nav-menu-btn{
     display: none;
 }
@@ -90,8 +88,8 @@ body{
     }
     .nav-menu{
         position: fixed;
-        margin-top: 100px;
-        top: -130%;
+        margin-top: 70px;
+        top: -108%;
         display: flex;
         justify-content: center;
         background: rgba(26, 26, 26, 0.452);
@@ -450,6 +448,10 @@ body{
     }
     .nav{
         z-index: 10;
+        height: 70px;
+    }
+    .nav-menu-btn{
+        margin-top: -10px;
     }
     .content{
         box-shadow: none;
@@ -484,4 +486,3 @@ body{
         display: none;
     }
 }
-
