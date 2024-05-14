@@ -450,11 +450,22 @@ body{
         z-index: 10;
         height: 70px;
     }
+    .nav-menu.responsive{
+        top: 0;
+    }
+    .nav-menu{
+        position: fixed;
+        margin-top: 70px;
+        top: -130%;
+    }
     .nav-menu-btn{
         margin-top: -10px;
     }
     .content{
         box-shadow: none;
+    }
+    .arrow, .arrow2 {
+        margin-top: 500px;
     }
     /* progress bar */
     .progress-bar {
@@ -466,21 +477,30 @@ body{
     }
     .personal-info{
         margin-top: 60px;
-        margin-bottom: -50px;
+        margin-bottom: -10px;
+    }
+    .personal-info p{
+        width: 95%;
     }
     .hidden .skills{
         margin-top: 63px;
     }
     .hidden .skills ul li{
-        width: 60%;
-        margin-left: 150px;
+        width: 100%;
+        margin-left: 50px;
     }
     .hidden .summary{
-        margin-top: 85px;
+        margin-top: 65px;
         margin-bottom: -160px;
+    }
+    .hidden .summary h3{
+        padding-top: 10px;
     }
     .hidden .hobbies{
         margin-top: 80px;
+    }
+    .hidden .hobbies p{
+        width: 90%;
     }
     .hidden .hobbies .not-phone{
         display: none;
