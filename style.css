@@ -466,11 +466,11 @@ body{
     }
     .arrow, .arrow2 {
         position: fixed;
-        margin-bottom: 80px;
+        margin-bottom: 50px;
     }
     /* progress bar */
     .progress-bar {
-        margin-top: -200px;
+        margin-top: -300px;
         width: 80%;
         max-width: 700px;
         border-radius: 20px;
