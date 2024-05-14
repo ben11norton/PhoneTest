@@ -206,7 +206,7 @@ body{
 
 /* progress bar */
 .progress-bar {
-    margin-top: -80px;
+    margin-top: -330px;
     width: 60%;
     max-width: 700px;
     border-radius: 20px;
@@ -327,10 +327,11 @@ body{
 
 /* personal info */
 .personal-info{
+    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 36px;
+    margin-top: -220px;
     padding-bottom: 30px;
 }
 .personal-info h2{
@@ -356,11 +357,12 @@ body{
 
 /* Skills */
 .hidden .skills{
+    position: fixed;
     display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 20px;
+    margin-top: -220px;
 }
 .hidden .skills h2{
     font-size: 20px;
@@ -386,10 +388,11 @@ body{
 }
 /* summary */
 .hidden .summary{
+    position: fixed;
     display: none;
     flex-direction: column;
     align-items: center;
-    padding-top: 47px;
+    margin-top: -180px;
     padding-bottom: 180px;
 }
 .hidden .summary h2{
@@ -414,9 +417,11 @@ body{
 }
 /* Hobbies */
 .hidden .hobbies {
+    position: fixed;
     display: none;
     flex-direction: column;
     align-items: center;
+    margin-top: -230px;
 }
 .hidden .hobbies h2{
     font-size: 20px;
@@ -435,6 +440,8 @@ body{
     font-family: 'Courier New', Courier, monospace;
     width: 60%;
 }
+
+
 
 
 /* PHONE SCREEN DESIGN */
@@ -473,7 +480,7 @@ body{
     /* progress bar */
     .progress-bar {
         margin-top: -300px;
-        width: 85%;
+        width: 80%;
         max-width: 700px;
         border-radius: 20px;
         padding: 10px;
@@ -517,6 +524,38 @@ body{
     }
     .hidden .hobbies p{
         width: 90%;
+    }
+    .hidden .hobbies .not-phone{
+        display: none;
+    }
+}
+
+/* IPAD SCREEN DESIGN */
+@media only screen and (max-height: 900px){
+    .progress-bar{
+        margin-top: -250px;
+        position: fixed;
+    }
+    .personal-info{
+        margin-top: -200px;
+        position: fixed;
+    }
+    .personal-info img{
+        width: 250px;
+    }
+    .hidden .skills{
+        margin-top: -200px;
+        position: fixed;
+    }
+    .hidden .summary{
+        position: fixed;
+        margin-top: -150px;
+        padding-top: -26px;
+    }
+    .hidden .hobbies{
+        position: fixed;
+        margin-top: -170px;
+        padding-top: -26px;
     }
     .hidden .hobbies .not-phone{
         display: none;
