@@ -436,8 +436,6 @@ body{
 }
 
 
-
-
 /* PHONE SCREEN DESIGN */
 @media only screen and (min-width: 300px) and (max-width: 767px){
     body{
@@ -456,18 +454,17 @@ body{
     .nav-menu{
         position: fixed;
         margin-top: 70px;
-        top: -130%;
+        top: -200%;
     }
     .nav-menu-btn{
         margin-top: -10px;
     }
     .content{
         box-shadow: none;
-        position: fixed;
     }
     .arrow, .arrow2 {
         position: fixed;
-        margin-bottom: 50px;
+        margin-bottom: 70px;
     }
     /* progress bar */
     .progress-bar {
@@ -478,14 +475,14 @@ body{
         padding: 10px;
     }
     .personal-info{
-        margin-top: -200px;
+        margin-top: -250px;
         position: fixed;
     }
     .personal-info p{
         width: 95%;
     }
     .hidden .skills{
-        margin-top: -200px;
+        margin-top: -250px;
         position: fixed;
     }
     .hidden .skills ul li{
@@ -493,7 +490,7 @@ body{
         margin-left: 50px;
     }
     .hidden .summary{
-        margin-top: -200px;
+        margin-top: -250px;
         margin-bottom: -160px;
         position: fixed;
     }
@@ -501,7 +498,7 @@ body{
         padding-top: 10px;
     }
     .hidden .hobbies{
-        margin-top: -190px;
+        margin-top: -2400px;
         position: fixed;
     }
     .hidden .hobbies p{
@@ -511,3 +508,5 @@ body{
         display: none;
     }
 }
+
+
