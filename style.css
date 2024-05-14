@@ -537,19 +537,22 @@ body{
         position: fixed;
     }
     .personal-info{
-        margin-top: -200px;
+        margin-top: -170px;
         position: fixed;
     }
     .personal-info img{
         width: 250px;
     }
     .hidden .skills{
-        margin-top: -200px;
+        margin-top: -170px;
         position: fixed;
+    }
+    .hidden .skills img{
+        width: 250px;
     }
     .hidden .summary{
         position: fixed;
-        margin-top: -150px;
+        margin-top: -130px;
         padding-top: -26px;
     }
     .hidden .hobbies{
