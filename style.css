@@ -464,7 +464,7 @@ body{
     }
     .arrow, .arrow2 {
         position: fixed;
-        margin-bottom: 70px;
+        margin-bottom: 100px;
     }
     /* progress bar */
     .progress-bar {
@@ -476,6 +476,7 @@ body{
     }
     .personal-info{
         margin-top: -250px;
+        padding-top: -36px;
         position: fixed;
     }
     .personal-info p{
@@ -483,6 +484,7 @@ body{
     }
     .hidden .skills{
         margin-top: -250px;
+        padding-top: -20px;
         position: fixed;
     }
     .hidden .skills ul li{
@@ -492,6 +494,7 @@ body{
     .hidden .summary{
         margin-top: -250px;
         margin-bottom: -160px;
+        padding-top: -47px;
         position: fixed;
     }
     .hidden .summary h3{
@@ -499,6 +502,7 @@ body{
     }
     .hidden .hobbies{
         margin-top: -240px;
+        padding-top: -20px;
         position: fixed;
     }
     .hidden .hobbies p{
@@ -508,5 +512,3 @@ body{
         display: none;
     }
 }
-
-
