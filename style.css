@@ -473,7 +473,7 @@ body{
     /* progress bar */
     .progress-bar {
         margin-top: -300px;
-        width: 86%;
+        width: 95%;
         max-width: 700px;
         border-radius: 20px;
         padding: 10px;
