@@ -456,6 +456,9 @@ body{
         position: fixed;
         margin-top: 70px;
         top: -200%;
+        background: rgba(26, 26, 26, 0.719);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
     }
     .nav-menu-btn{
         margin-top: -10px;
