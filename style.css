@@ -475,7 +475,7 @@ body{
         padding: 10px;
     }
     .personal-info{
-        margin-top: -240px;
+        margin-top: -220px;
         padding-top: -36px;
         position: fixed;
     }
@@ -483,16 +483,19 @@ body{
         width: 95%;
     }
     .hidden .skills{
-        margin-top: -240px;
+        margin-top: -220px;
         padding-top: -20px;
         position: fixed;
+    }
+    .hidden .skills ul{
+        width: 80%;
     }
     .hidden .skills ul li{
         width: 80%;
         margin-left: 50px;
     }
     .hidden .summary{
-        margin-top: -240px;
+        margin-top: -220px;
         margin-bottom: -160px;
         padding-top: -47px;
         position: fixed;
@@ -504,7 +507,7 @@ body{
         width: 80%;
     }
     .hidden .hobbies{
-        margin-top: -220px;
+        margin-top: -190px;
         padding-top: -20px;
         position: fixed;
     }
