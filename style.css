@@ -463,6 +463,7 @@ body{
     }
     .content{
         box-shadow: none;
+        position: fixed;
     }
     .arrow, .arrow2 {
         position: fixed;
@@ -477,14 +478,14 @@ body{
         padding: 10px;
     }
     .personal-info{
-        margin-top: -150px;
+        margin-top: -200px;
         position: fixed;
     }
     .personal-info p{
         width: 95%;
     }
     .hidden .skills{
-        margin-top: -150px;
+        margin-top: -200px;
         position: fixed;
     }
     .hidden .skills ul li{
@@ -492,7 +493,7 @@ body{
         margin-left: 50px;
     }
     .hidden .summary{
-        margin-top: -150px;
+        margin-top: -200px;
         margin-bottom: -160px;
         position: fixed;
     }
@@ -500,7 +501,7 @@ body{
         padding-top: 10px;
     }
     .hidden .hobbies{
-        margin-top: -140px;
+        margin-top: -190px;
         position: fixed;
     }
     .hidden .hobbies p{
