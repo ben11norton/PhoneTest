@@ -433,6 +433,7 @@ body{
 }
 .hidden .hobbies img{
     width: 30%;
+    max-width: 490px;
     border-radius: 10px;
 }
 .hidden .hobbies p{
