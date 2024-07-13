@@ -152,21 +152,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// creating functionality to redirect user to browser when clicking on link 
-function usingLinkedIn(){
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    return /linkedin/i.test(userAgent);
-}
-
-function alterOutboundLinks(){
-    if(usingLinkedIn()){
-        const links = document.querySelector('a');
-        links.forEach(link => {
-            const url = new URL(link.href);
-            url.searchParams.set('source', 'linkedin-app');
-            link.href = url.toString();
-        })
-    }
-}
-
-alterOutboundLinks();
+ 
