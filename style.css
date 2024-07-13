@@ -636,7 +636,7 @@ button{
 /* In app browsing design  */
 /* window.innerHeight = 664
 window.innerWidth = 500 */
-@media only screen and (max-width: 500px) and (max-height: 715px) {
+@media only screen and (max-width: 500px) and (max-height: 664px) {
     body{
         overflow-y: hidden;
     }
